@@ -53,16 +53,6 @@
             margin: 1.0rem 0;
         }
 
-        /* .column1 {
-            
-        }
-        
-        .column2 {
-            grid-template-columns: 1fr 2fr;
-        } */
-
-
-        /* Responsive design for mobile view */
         @media (min-width: 640px) {
             main {
                 grid-template-columns: 1fr;
