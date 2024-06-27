@@ -1,0 +1,10 @@
+/* style-large.css */
+@media (min-width: 1200px) {
+    .container {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+}
