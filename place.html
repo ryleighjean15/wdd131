@@ -15,7 +15,12 @@
         <header>
             <h1>New Zealand</h1>
             <figure>
-                <img src="images/hero.webp" alt="Madagascar background">
+                <img src="images/hero-small.webp" srcset="images/hero-small.webp 400w,
+                images/hero-med.webp 800w,
+                images/hero.webp 1200w"
+                sizes="(max-width: 400px) 400px,
+               (max-width: 800px) 800px,
+               1200px"alt="New Zealand background">
         </header>
     <main>
         <div class="text-box">
@@ -27,22 +32,19 @@
         </div>
 
         <div class="text-box-2">
-            <h3>Weather</h3>
-            <p>Temperature: 10C</p>
-            <p>Conditions: Sunny</p>
-            <p>UV Index: 10</p>
+            <h3>Weather <span class="weather-icon">⛅</span></h2>
+            <p>Temperature: <span id="temperature">20°C</span></p>
+            <p>Wind Speed: <span id="windSpeed">10 km/h</span></p>
+            <p>Wind Chill Factor: <span id="windChill"></span></p>
         </div>
 
-        <div class="sun">
-            <figure>
-                <img src="images/weather.sun.webp" alt="sun">
-            </figure>
+        <div>
+            <button id="chillbutton">Calculate Wind Chill</button>
         </div>
+
 
     <footer>
-        <p>
-            &copy; <span id="currentyear"></span> Ryleigh Rowell | Arizona | @2024
-        </p>
+        <p>&copy; <span id="currentyear"></span> Ryleigh Rowell | Arizona |</p>
         <p id="lastModified"></p>
     </footer>
 </body>

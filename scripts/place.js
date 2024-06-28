@@ -1,11 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Select the h1 element
-    const greeting = document.getElementById('greeting');
+const temperature = 50;
+const wind = 20;
 
-    // Apply some styles
-    greeting.style.color = 'blue';
-    greeting.style.fontSize = '2em';
-    greeting.style.fontFamily = 'Arial, sans-serif';
-    greeting.style.textAlign = 'center';
-    greeting.style.marginTop = '20px';
-});
+function caluculateWindChill(T,V) {
+    return 35.74 + (0.6215*T) - (35.75*(Math.pow(V,0.16))) + (0.4275*T)*(Math.pow(V,0.16));
+}
+
+const tempElement = document.getElementById("temp");
+tempElement.innerHTML = temperature;
+
+document.querySelector("#wind").innerText = wind;
+
+document.getElementById("chillbutton").addEventListener('click',() => {
+    const chill = caluculateWindChill(temperature,wind);
+    document.getElementById("chill").innerText = chill.toFixed(2);
+
+
+    document.getElementById('currentyear').innerText = new Date().getFullYear();
+
+
+    document.getElementById('lastModified').innerText = `Last Modified: ${document.lastModified}`;
+
+})
