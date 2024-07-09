@@ -72,6 +72,13 @@ const temples = [
         area: 21983,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/hong-kong-china/400x250/hong-kong-china-temple-lds-1064560-wallpaper.jpg"
     }
+    // {
+    //     templeName: "Gilbert Arizona",
+    //     location: "Gilbert Arizona",
+    //     dedicated: "2014, March, 2",
+    //     area: 85326,
+    //     imageUrl: https://newsroom.churchofjesuschrist.org/media/orig/Gilbert_Temple_sunset5.jpg
+    // }
 ];
 
 function createTempleCard(temple) {
