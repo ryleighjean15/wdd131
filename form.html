@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+            <!-- Product Name -->
+            <div>
+                <label for="productName">Product Name</label>
+                <select id="productName" name="productName" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+            
+            <!-- Overall Rating -->
+            <div>
+                <label>Overall Rating</label>
+                <div>
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                    <label for="rating1">1 &#9733;</label>
+                    
+                    <input type="radio" id="rating2" name="rating" value="2">
+                    <label for="rating2">2 &#9733;</label>
+                    
+                    <input type="radio" id="rating3" name="rating" value="3">
+                    <label for="rating3">3 &#9733;</label>
+                    
+                    <input type="radio" id="rating4" name="rating" value="4">
+                    <label for="rating4">4 &#9733;</label>
+                    
+                    <input type="radio" id="rating5" name="rating" value="5">
+                    <label for="rating5">5 &#9733;</label>
+                </div>
+            </div>
+            
+            <!-- Date of Installation -->
+            <div>
+                <label for="installDate">Date of Installation</label>
+                <input type="date" id="installDate" name="installDate" required>
+            </div>
+            
+            <div>
+                <label>Which features of the product did you find useful? (check all that apply)</label>
+                <div>
+                    <input type="checkbox" id="feature1" name="features" value="Feature1">
+                    <label for="feature1">Ease of use</label>
+                    
+                    <input type="checkbox" id="feature2" name="features" value="Feature2">
+                    <label for="feature2">Design</label>
+                    
+                    <input type="checkbox" id="feature3" name="features" value="Feature3">
+                    <label for="feature3">Performance</label>
+                </div>
+            </div>
+            
+            <div>
+                <label for="writtenReview">Written Review (optional)</label>
+                <textarea id="writtenReview" name="writtenReview" rows="4" cols="50"></textarea>
+            </div>
+
+            <div>
+                <label for="userName">Name (optional)</label>
+                <input type="text" id="userName" name="userName">
+            </div>
+
+            <div>
+                <input type="submit" value="Submit Review">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> 2024 | Ryleigh Rowell</p>
+    </footer>
+    <script src="scripts/form.js"></script>
+</body>
+</html>
