@@ -5,8 +5,8 @@ body {
 }
 
 header, footer {
-    background-color: #28A745;
-    color: white;
+    background-color: #84d897;
+    color: rgb(8, 5, 5);
     padding: 1em;
     text-align: center;
 }
