@@ -26,14 +26,17 @@ nav ul li a {
     text-decoration: none;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: Georgia, serif;
     text-align: center;
+    font-size: 20px;
 }
 
-main img {
-    max-width: 100%;
+img {
+    max-width: 50%;
     height: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .text-box::before {
@@ -67,5 +70,21 @@ main img {
     margin-top: 20px;
     border: 2px solid #555;
     font-size: 17px;
+    
+}
+
+.recipes {
+    display: flex;
+}
+
+.recipes img {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.trip {
+    position: relative;
+    font-size: 1.3rem;
+    text-align: center;
     
 }
