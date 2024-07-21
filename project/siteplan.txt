@@ -1,0 +1,25 @@
+Healthy Living Hub
+
+This site will have different pages with recipes, workout
+routines, and mental wellness practices for those looking
+to create a healthier lifestyle in all aspects. 
+
+Scenarios: 
+    -what are the healthiest foods containing all the 
+    nutrients I need?
+    -how can I create a structure to include
+    therepuetic hobbies within my busy schedule?
+    -quick and easy workouts to increase my 
+    indurance and strength. 
+
+Color Schema:
+    Used for the headings/footers: 
+    background-color: #84d897;
+    color: rgb(8, 5, 5);
+
+Typography: body: font-family: Arial, sans-serif;
+    color: #333;
+    headings: font-family: Georgia, serif;
+
+
+    

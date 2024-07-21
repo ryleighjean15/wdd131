@@ -42,6 +42,20 @@
             max-width: 80%;
             height: auto;
             border-radius: 10px;
+
+            .container {
+            padding: 20px;
+        }
+        .activity {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
         }
       
     </style>
@@ -51,6 +65,7 @@
         <h1>Mental Wellness</h1>
         <p>Your guide to a healthier mind</p>
             
+
             <nav>
                 <ul class="navigation">
                     <li><a href="siteplan.html">Home</a></li>
@@ -77,6 +92,76 @@
         <h4>Therapeutic Hobbies</h4>
         <p>Engaging in therapeutic hobbies such as journaling, painting, and other creative activities can significantly enhance mental well-being. Journaling provides an outlet for expressing emotions and organizing thoughts, helping to reduce stress and anxiety. Painting and other artistic pursuits foster creativity and mindfulness, allowing individuals to focus on the present moment and experience a sense of accomplishment. These hobbies offer a healthy escape from daily pressures, promote relaxation, and contribute to overall mental health.</p>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const activityList = document.getElementById('activityList');
+            const addActivityBtn = document.getElementById('addActivityBtn');
+            const activityForm = document.getElementById('activityForm');
+            const saveActivityBtn = document.getElementById('saveActivityBtn');
+            const activityNameInput = document.getElementById('activityName');
+
+            let activities = JSON.parse(localStorage.getItem('activities')) || [];
+
+            function displayActivities() {
+                activityList.innerHTML = '';
+                activities.forEach((activity, index) => {
+                    const activityDiv = document.createElement('div');
+                    activityDiv.className = 'activity';
+                    activityDiv.innerHTML = `
+                        <p>${activity.name}</p>
+                        <button onclick="deleteActivity(${index})">Delete</button>
+                    `;
+                    activityList.appendChild(activityDiv);
+                });
+            }
+
+            function addActivity() {
+                const activityName = activityNameInput.value.trim();
+                if (activityName) {
+                    const newActivity = { name: activityName };
+                    activities.push(newActivity);
+                    localStorage.setItem('activities', JSON.stringify(activities));
+                    displayActivities();
+                    activityForm.classList.add('hidden');
+                } else {
+                    alert('Activity name cannot be empty.');
+                }
+            }
+
+            function deleteActivity(index) {
+                activities.splice(index, 1);
+                localStorage.setItem('activities', JSON.stringify(activities));
+                displayActivities();
+            }
+
+            addActivityBtn.addEventListener('click', () => {
+                activityForm.classList.remove('hidden');
+            });
+
+            saveActivityBtn.addEventListener('click', addActivity);
+
+            displayActivities();
+        });
+
+        // Function to be accessed by delete button in innerHTML
+        function deleteActivity(index) {
+            activities.splice(index, 1);
+            localStorage.setItem('activities', JSON.stringify(activities));
+            displayActivities();
+        }
+    </script>
+
+<div class="container">
+    <button id="addActivityBtn">Add New Activity</button>
+    <div id="activityList"></div>
+    <div id="activityForm" class="hidden">
+        <h2>Add a New Activity</h2>
+        <label for="activityName">Activity Name:</label>
+        <input type="text" id="activityName" name="activityName">
+        <button id="saveActivityBtn">Save Activity</button>
+    </div>
+</div>    
 
     <footer>
         &copy; 2024 Mental Wellness. All rights reserved.
