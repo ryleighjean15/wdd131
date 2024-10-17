@@ -45,7 +45,7 @@ This project is a **Health and Wellness Website** designed to help users improve
     ```
 2. **Navigate to the project directory**:
     ```bash
-    cd health-page
+    [cd health-page](https://github.com/ryleighjean15/wdd131.git)
     ```
 3. **Open the `index.html` file** in a web browser to start exploring the website.
 
