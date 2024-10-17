@@ -32,12 +32,20 @@ h1, h2, h3, h4 {
     font-size: 20px;
 }
 
-img {
-    max-width: 100%;
+.content img {
+    max-width: 70%;
+}
+
+.trip img {
+    max-width: 95%;
+}
+
+/* img {
+    max-width: 50%;
     height: auto;
     display: flex;
     justify-content: center;
-}
+} */
 
 .text-box::before {
     content: "🌿";
