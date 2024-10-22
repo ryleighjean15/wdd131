@@ -26,6 +26,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav a:hover {
+    text-decoration: underline;
+  }
+
 h1, h2, h3, h4 {
     font-family: Georgia, serif;
     text-align: center;
@@ -36,22 +40,27 @@ h1, h2, h3, h4 {
     max-width: 70%;
 }
 
+header img {
+    max-width: 70px;
+    vertical-align: middle;
+  }
+
 .trip img {
     max-width: 95%;
 }
 
-/* img {
+img {
     max-width: 50%;
     height: auto;
     display: flex;
     justify-content: center;
-} */
+}
 
-main img {
-    max-width: 70%;
+/* main img {
+    max-width: 60%;
    justify-content: center;
 
-}
+} */
 
 .recipes img {
     max-width: 100%;
